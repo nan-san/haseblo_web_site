@@ -5,8 +5,8 @@ html {
 
 body {
   font-size: 1.6em;
-  font-family: 'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
-  line-height: 2.0;
+  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  line-height: 2;
   font-weight: 500;
   color: #fff;
   background-color: #000000;
@@ -27,7 +27,7 @@ img {
   text-align: center;
 }
 
-header {
+.header {
   top: 0;
   left: 0;
   height: 8.8rem;
@@ -50,13 +50,13 @@ header {
 =============*/
 }
 
-header .header__logo img {
+.header .header__logo img {
   display: inline-block;
   height: 6.4rem;
   margin: 1.6rem 0 0 1.6rem;
 }
 
-header .header {
+.header .header__main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -68,7 +68,7 @@ header .header {
           justify-content: space-between;
 }
 
-header .hamburger__menu {
+.header .hamburger__menu {
   display: block;
   position: fixed;
   top: 0;
@@ -79,34 +79,34 @@ header .hamburger__menu {
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   z-index: 3;
   opacity: 0;
 }
 
-header .open .hamburger__menu {
+.header .open .hamburger__menu {
   left: 0;
   opacity: 1;
 }
 
-header .hamburger__menu .inner {
+.header .hamburger__menu .inner {
   padding: 2.2rem;
 }
 
-header .hamburger__menu .inner ul {
+.header .hamburger__menu .inner ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-header .hamburger__menu .inner ul li {
+.header .hamburger__menu .inner ul li {
   position: relative;
   margin: 0;
-  border-bottom: .1rem solid #333;
+  border-bottom: 0.1rem solid #333;
 }
 
-header .hamburger__menu .inner ul li a {
+.header .hamburger__menu .inner ul li a {
   display: block;
   color: #333;
   font-size: 1.6rem;
@@ -116,88 +116,88 @@ header .hamburger__menu .inner ul li a {
           transition-duration: 0.2s;
 }
 
-header .hamburger__menu .inner ul li a:hover {
+.header .hamburger__menu .inner ul li a:hover {
   background: #e4e4e4;
 }
 
 @media screen and (max-width: 767px) {
-  header .hamburger__menu {
+  .header .hamburger__menu {
     left: -22rem;
     width: 22rem;
   }
-  header .header__nav ul li {
+  .header .header__nav ul li {
     display: none;
   }
 }
 
-header .toggle__btn {
+.header .toggle__btn {
   display: block;
   position: fixed;
   top: 3rem;
   right: 3rem;
   width: 3rem;
   height: 3rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
   cursor: pointer;
   z-index: 3;
 }
 
-header .toggle__btn span {
+.header .toggle__btn span {
   display: block;
   position: absolute;
   left: 0;
   width: 3rem;
-  height: .2rem;
+  height: 0.2rem;
   background-color: #ffffff;
-  border-radius: .4rem;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  border-radius: 0.4rem;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-header .toggle__btn span:nth-child(1) {
-  top: .4rem;
+.header .toggle__btn span:nth-child(1) {
+  top: 0.4rem;
 }
 
-header .toggle__btn span:nth-child(2) {
+.header .toggle__btn span:nth-child(2) {
   top: 1.4rem;
 }
 
-header .toggle__btn span:nth-child(3) {
-  bottom: .4rem;
+.header .toggle__btn span:nth-child(3) {
+  bottom: 0.4rem;
 }
 
-header .open .toggle__btn span {
+.header .open .toggle__btn span {
   background-color: #fff;
 }
 
-header .open .toggle__btn span:nth-child(1) {
+.header .open .toggle__btn span:nth-child(1) {
   -webkit-transform: translateY(1rem) rotate(-315deg);
   transform: translateY(1rem) rotate(-315deg);
 }
 
-header .open .toggle__btn span:nth-child(2) {
+.header .open .toggle__btn span:nth-child(2) {
   opacity: 0;
 }
 
-header .open .toggle__btn span:nth-child(3) {
+.header .open .toggle__btn span:nth-child(3) {
   -webkit-transform: translateY(-1rem) rotate(315deg);
   transform: translateY(-1rem) rotate(315deg);
 }
 
 @media screen and (min-width: 768px) {
-  header .toggle__btn span {
+  .header .toggle__btn span {
     display: none;
   }
 }
 
-header #mask {
+.header #mask {
   display: none;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-header .open #mask {
+.header .open #mask {
   display: block;
   position: fixed;
   top: 0;
@@ -205,7 +205,7 @@ header .open #mask {
   width: 100%;
   height: 100%;
   background: #000;
-  opacity: .8;
+  opacity: 0.8;
   z-index: 2;
   cursor: pointer;
 }
