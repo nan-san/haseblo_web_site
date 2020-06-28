@@ -1,5 +1,42 @@
 @charset "utf-8";
 
+//このサイトを参考にしました https://www.seojuku.com/blog/responsive-mediaquery.html
+// ブレイクポイントは相談して決めましょう
+$breakpoints: (
+  "sm": "screen and (max-width: 414px)",
+  //スマホ
+    "md": "screen and (max-width: 768px)",
+  //iPad
+    "lg": "screen and (max-width: 834px)",
+  //iPad PRO(11)
+    "xl": "screen and (max-width: 1024px)",
+  //iPad Pro(12.9)
+) !default;
+
+@mixin mq($breakpoint: sm) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: md) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: lg) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@mixin mq($breakpoint: xl) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
 html {
   font-size: 62.5%;
 }
@@ -48,6 +85,33 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  /*============
+グローバルナビゲーション gnav
+=============*/
+  .gnav {
+    @include mq(md) {
+      display: none;
+    }
+    display: flex;
+    margin: 0 auto;
+    width: 80%;
+    &__title {
+      font-size: 10px;
+    }
+    &__list {
+      & ul {
+        display: flex;
+        justify-content: space-between;
+        & li {
+          & a {
+            color: #fff;
+            text-decoration: none;
+          }
+        }
+      }
+    }
   }
 
   /*============

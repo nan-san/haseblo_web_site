@@ -40,6 +40,9 @@ img {
   position: sticky;
   z-index: 100;
   /*============
+グローバルナビゲーション gnav
+=============*/
+  /*============
 .hamburger__menu
 =============*/
   /*============
@@ -66,6 +69,38 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.header .gnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+  .header .gnav {
+    display: none;
+  }
+}
+
+.header .gnav__title {
+  font-size: 10px;
+}
+
+.header .gnav__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .gnav__list ul li a {
+  color: #fff;
+  text-decoration: none;
 }
 
 .header .hamburger__menu {
