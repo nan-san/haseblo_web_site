@@ -1,42 +1,5 @@
 @charset "utf-8";
 
-//このサイトを参考にしました https://www.seojuku.com/blog/responsive-mediaquery.html
-// ブレイクポイントは相談して決めましょう
-$breakpoints: (
-  "sm": "screen and (max-width: 414px)",
-  //スマホ
-    "md": "screen and (max-width: 768px)",
-  //iPad
-    "lg": "screen and (max-width: 834px)",
-  //iPad PRO(11)
-    "xl": "screen and (max-width: 1024px)",
-  //iPad Pro(12.9)
-) !default;
-
-@mixin mq($breakpoint: sm) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq($breakpoint: md) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq($breakpoint: lg) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
-@mixin mq($breakpoint: xl) {
-  @media #{map-get($breakpoints, $breakpoint)} {
-    @content;
-  }
-}
-
 html {
   font-size: 62.5%;
 }
@@ -91,7 +54,7 @@ img {
 グローバルナビゲーション gnav
 =============*/
   .gnav {
-    @include mq(md) {
+    @media screen and (max-width: 767px) {
       display: none;
     }
     display: flex;
@@ -247,6 +210,9 @@ img {
 .footer {
   height: 100vh;
   max-height: 48rem;
+  @media screen and (min-width: 767px) {
+    height: 100%;
+  }
   a {
     color: #fff;
     text-decoration: none;
@@ -265,13 +231,29 @@ img {
   }
   .footer__nav-1 {
     margin-bottom: 4rem;
+    @media screen and (min-width: 767px) {
+      display: flex;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
   }
   .footer__nav-2 {
     font-size: 1.2rem;
     margin-bottom: 4rem;
+    @media screen and (min-width: 767px) {
+      display: flex;
+      justify-content: center;
+    }
+    & li a {
+      color: rgb(165, 165, 165);
+    }
   }
   .copyright {
     margin-bottom: 4rem;
     font-size: 1.2rem;
+    color: rgb(165, 165, 165);
   }
+}
+.line + .line {
+  border-left: 1px solid rgb(255, 255, 255);
 }
