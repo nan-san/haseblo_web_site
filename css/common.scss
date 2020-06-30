@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+$hover-color: rgb(10, 102, 206);
+
 html {
   font-size: 62.5%;
 }
@@ -19,14 +21,15 @@ img {
 }
 
 .btn:hover {
-  color: blue;
+  color: $hover-color;
 }
 
 .container {
-  max-width: 96rem;
+  max-width: 120rem;
   width: 100%;
   margin: 0 auto;
   text-align: center;
+  // background-color: #06b4ff;
 }
 
 .header {
@@ -39,48 +42,42 @@ img {
   position: sticky;
   z-index: 100;
 
-  .header__logo img {
-    display: inline-block;
-    height: 6.4rem;
-    margin: 1.6rem 0 0 1.6rem;
+  .header__logo {
+    margin-left: 4rem;
+
+    & img {
+      display: flex;
+      height: 5rem;
+    }
   }
   .header__main {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-
-  /*============
-グローバルナビゲーション gnav
-=============*/
-  .gnav {
-    @media screen and (max-width: 767px) {
-      display: none;
-    }
+  &__left {
     display: flex;
-    margin: 0 auto;
-    width: 80%;
-    &__title {
-      font-size: 10px;
-    }
-    &__list {
-      & ul {
-        display: flex;
-        justify-content: space-between;
-        & li {
-          & a {
-            color: #fff;
-            text-decoration: none;
-          }
-        }
-      }
-    }
+    align-items: center;
+  }
+  &__header__title-container {
+  }
+  &__sub-title {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+  &__title {
+    font-size: 2rem;
+    margin-top: -1rem;
   }
 
   /*============
 .hamburger__menu
 =============*/
-
+  .responsive__nav {
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
   .hamburger__menu {
     display: block;
     position: fixed;
@@ -124,7 +121,7 @@ img {
   .hamburger__menu .inner ul li a:hover {
     background: #e4e4e4;
   }
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 768px) {
     .hamburger__menu {
       left: -22rem;
       width: 22rem;
@@ -204,6 +201,55 @@ img {
     opacity: 0.8;
     z-index: 2;
     cursor: pointer;
+  }
+}
+
+/*============
+グローバルナビゲーション gnav
+=============*/
+.gnav {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  display: flex;
+  margin-right: 4rem;
+  &__title {
+    font-size: 10px;
+  }
+  &__list {
+    & ul {
+      display: flex;
+      & li {
+        line-height: 4rem;
+        font-size: 1.4rem;
+        margin-right: 4rem;
+        @media screen and (max-width: 1024px) {
+          font-size: 1.2rem;
+          margin-right: 1.7rem;
+        }
+        & a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__join {
+    background-color: $hover-color;
+    padding: 0 2rem 0 2rem;
+    z-index: 5;
+    @media screen and (max-width: 1024px) {
+      margin-right: -2rem;
+    }
+    & a {
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+  &__icon {
+    font-size: 2.8rem;
+    vertical-align: -10%;
   }
 }
 

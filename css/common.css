@@ -17,11 +17,11 @@ img {
 }
 
 .btn:hover {
-  color: blue;
+  color: #0a66ce;
 }
 
 .container {
-  max-width: 96rem;
+  max-width: 120rem;
   width: 100%;
   margin: 0 auto;
   text-align: center;
@@ -40,9 +40,6 @@ img {
   position: sticky;
   z-index: 100;
   /*============
-グローバルナビゲーション gnav
-=============*/
-  /*============
 .hamburger__menu
 =============*/
   /*============
@@ -53,10 +50,15 @@ img {
 =============*/
 }
 
+.header .header__logo {
+  margin-left: 4rem;
+}
+
 .header .header__logo img {
-  display: inline-block;
-  height: 6.4rem;
-  margin: 1.6rem 0 0 1.6rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5rem;
 }
 
 .header .header__main {
@@ -71,36 +73,29 @@ img {
           justify-content: space-between;
 }
 
-.header .gnav {
+.header__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 0 auto;
-  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media screen and (max-width: 767px) {
-  .header .gnav {
+.header__sub-title {
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.header__title {
+  font-size: 2rem;
+  margin-top: -1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header .responsive__nav {
     display: none;
   }
-}
-
-.header .gnav__title {
-  font-size: 10px;
-}
-
-.header .gnav__list ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.header .gnav__list ul li a {
-  color: #fff;
-  text-decoration: none;
 }
 
 .header .hamburger__menu {
@@ -155,7 +150,7 @@ img {
   background: #e4e4e4;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
   .header .hamburger__menu {
     left: -22rem;
     width: 22rem;
@@ -243,6 +238,73 @@ img {
   opacity: 0.8;
   z-index: 2;
   cursor: pointer;
+}
+
+/*============
+グローバルナビゲーション gnav
+=============*/
+.gnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 4rem;
+}
+
+@media screen and (max-width: 767px) {
+  .gnav {
+    display: none;
+  }
+}
+
+.gnav__title {
+  font-size: 10px;
+}
+
+.gnav__list ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gnav__list ul li {
+  line-height: 4rem;
+  font-size: 1.4rem;
+  margin-right: 4rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .gnav__list ul li {
+    font-size: 1.2rem;
+    margin-right: 1.7rem;
+  }
+}
+
+.gnav__list ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.gnav__join {
+  background-color: #0a66ce;
+  padding: 0 2rem 0 2rem;
+  z-index: 5;
+}
+
+@media screen and (max-width: 1024px) {
+  .gnav__join {
+    margin-right: -2rem;
+  }
+}
+
+.gnav__join a {
+  font-size: 2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.gnav__icon {
+  font-size: 2.8rem;
+  vertical-align: -10%;
 }
 
 /*============
