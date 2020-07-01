@@ -12,9 +12,11 @@
 
   <body>
     <!-- ヘッダー読み込み -->
-    <header id="header-top" class="header"></header>
+    <header id="header" class="header header-top"></header>
 
     <main>
+      <img src="./img/image-sample.jpg" alt="" style="width: 100%;" />
+      <div class="b"></div>
       <br />
       <br />
       <br />
@@ -62,7 +64,9 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script>
       $(function () {
-        $("#header-top").load("header-top.html");
+        $("#header").load("header-top.html", function () {
+          $.getScript("./js/script.js", function () {});
+        });
         $("#footer").load("footer.html");
       });
     </script>
