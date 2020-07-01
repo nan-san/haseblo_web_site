@@ -27,18 +27,28 @@ img {
   text-align: center;
 }
 
+.header__bg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*============
+.header
+=============*/
 .header {
   top: 0;
   left: 0;
-  height: 8.8rem;
   margin: auto;
-  margin-bottom: 6.4rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   position: -webkit-sticky;
   position: sticky;
   z-index: 100;
+  /*============
+.header-top index.html用のheader
+=============*/
   /*============
 .hamburger__menu
 =============*/
@@ -50,14 +60,7 @@ img {
 =============*/
 }
 
-.header .header__logo {
-  margin-left: 4rem;
-}
-
 .header .header__logo img {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 5rem;
 }
 
@@ -68,9 +71,9 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .header__left {
@@ -80,16 +83,52 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 350px;
+}
+
+@media screen and (min-width: 768px) {
+  .header__left {
+    margin-left: -1rem;
+  }
+}
+
+.header__left-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 350px;
+  height: 140px;
+  background: linear-gradient(45deg, transparent 0px, #000 0px), linear-gradient(135deg, transparent 0px, #000 0px), linear-gradient(225deg, transparent 0px, #000 0px), linear-gradient(315deg, transparent 50px, #000 50px);
+  background-position: bottom left, top left, top right, bottom right;
+  background-size: 50% 50%;
+  background-repeat: no-repeat;
 }
 
 .header__sub-title {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-top: 1rem;
 }
 
 .header__title {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-top: -1rem;
+}
+
+.header__title-container {
+  padding-left: 1rem;
+}
+
+.header__catch-copy {
+  font-size: 1rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -244,10 +283,14 @@ img {
 グローバルナビゲーション gnav
 =============*/
 .gnav {
+  background: pink;
+  height: 70px;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 4rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media screen and (max-width: 767px) {
@@ -256,26 +299,22 @@ img {
   }
 }
 
-.gnav__title {
-  font-size: 10px;
-}
-
 .gnav__list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .gnav__list ul li {
-  line-height: 4rem;
+  line-height: 6.5rem;
   font-size: 1.4rem;
-  margin-right: 4rem;
+  margin-right: 2rem;
 }
 
 @media screen and (max-width: 1024px) {
   .gnav__list ul li {
     font-size: 1.2rem;
-    margin-right: 1.7rem;
   }
 }
 
@@ -287,13 +326,9 @@ img {
 .gnav__join {
   background-color: #0a66ce;
   padding: 0 2rem 0 2rem;
+  margin: 1.5rem 0 1.5rem 1.5rem;
   z-index: 5;
-}
-
-@media screen and (max-width: 1024px) {
-  .gnav__join {
-    margin-right: -2rem;
-  }
+  height: 40px;
 }
 
 .gnav__join a {
@@ -302,9 +337,22 @@ img {
   text-decoration: none;
 }
 
+@media screen and (max-width: 1024px) {
+  .gnav__join a {
+    font-size: 1.2rem;
+    vertical-align: -15%;
+  }
+}
+
 .gnav__icon {
   font-size: 2.8rem;
   vertical-align: -10%;
+}
+
+@media screen and (max-width: 1024px) {
+  .gnav__icon {
+    font-size: 2rem;
+  }
 }
 
 /*============
