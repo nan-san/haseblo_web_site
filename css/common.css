@@ -1,38 +1,4 @@
 @charset "UTF-8";
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-size: 1.6em;
-  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
-  line-height: 2;
-  font-weight: 500;
-  color: #fff;
-  background-color: #000000;
-}
-
-img {
-  vertical-align: bottom;
-}
-
-.btn:hover {
-  color: #0a66ce;
-}
-
-.container {
-  max-width: 120rem;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.header__bg {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 /*============
 .header
 =============*/
@@ -46,6 +12,7 @@ img {
   position: -webkit-sticky;
   position: sticky;
   z-index: 100;
+  max-width: 1366px;
   /*============
 .header-top index.html用のheader
 =============*/
@@ -105,12 +72,9 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 350px;
+  width: 250px;
   height: 140px;
-  background: linear-gradient(45deg, transparent 0px, #000 0px), linear-gradient(135deg, transparent 0px, #000 0px), linear-gradient(225deg, transparent 0px, #000 0px), linear-gradient(315deg, transparent 50px, #000 50px);
-  background-position: bottom left, top left, top right, bottom right;
-  background-size: 50% 50%;
-  background-repeat: no-repeat;
+  margin-left: 1rem;
 }
 
 .header__sub-title {
@@ -131,7 +95,7 @@ img {
   font-size: 1rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header .responsive__nav {
     display: none;
   }
@@ -189,7 +153,7 @@ img {
   background: #e4e4e4;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .header .hamburger__menu {
     left: -22rem;
     width: 22rem;
@@ -254,7 +218,7 @@ img {
   transform: translateY(-1rem) rotate(315deg);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header .toggle__btn span {
     display: none;
   }
@@ -283,7 +247,7 @@ img {
 グローバルナビゲーション gnav
 =============*/
 .gnav {
-  background: pink;
+  background: #000;
   height: 70px;
   width: 100%;
   display: -webkit-box;
@@ -293,7 +257,7 @@ img {
       justify-content: space-around;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1024px) {
   .gnav {
     display: none;
   }
@@ -452,5 +416,33 @@ footer
 
 .line + .line {
   border-left: 1px solid white;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6em;
+  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  line-height: 2;
+  font-weight: 500;
+  color: #fff;
+  background-color: #000000;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+.btn:hover {
+  color: #0a66ce;
+}
+
+.container {
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
 }
 /*# sourceMappingURL=common.css.map */
