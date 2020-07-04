@@ -27,10 +27,6 @@
 =============*/
 }
 
-.header .header__logo img {
-  height: 5rem;
-}
-
 .header .header__main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,6 +37,9 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background-color: #000;
+  height: 70px;
+  width: 100%;
 }
 
 .header__left {
@@ -50,16 +49,12 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   width: 350px;
-}
-
-@media screen and (min-width: 768px) {
-  .header__left {
-    margin-left: -1rem;
-  }
+  margin-left: 2rem;
+  margin-top: 0.5rem;
 }
 
 .header__left-top {
@@ -74,7 +69,22 @@
           justify-content: center;
   width: 250px;
   height: 140px;
-  margin-left: 1rem;
+  margin-top: -1rem;
+}
+
+.header__left-top img {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+
+.header .header__logo {
+  height: 70px;
+}
+
+.header .header__logo img {
+  width: 5rem;
+  margin-top: 0.3rem;
 }
 
 .header__sub-title {
@@ -95,7 +105,7 @@
   font-size: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1030px) {
   .header .responsive__nav {
     display: none;
   }
@@ -166,7 +176,7 @@
 .header .toggle__btn {
   display: block;
   position: fixed;
-  top: 3rem;
+  top: 2rem;
   right: 3rem;
   width: 3rem;
   height: 3rem;
@@ -218,7 +228,7 @@
   transform: translateY(-1rem) rotate(315deg);
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1030px) {
   .header .toggle__btn span {
     display: none;
   }
@@ -247,18 +257,22 @@
 グローバルナビゲーション gnav
 =============*/
 .gnav {
+  width: 100%;
+  background: #000;
   background: #000;
   height: 70px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 @media screen and (max-width: 1024px) {
   .gnav {
+    background: #000;
     display: none;
   }
 }
@@ -271,14 +285,15 @@
 }
 
 .gnav__list ul li {
-  line-height: 6.5rem;
+  line-height: 7rem;
   font-size: 1.4rem;
-  margin-right: 2rem;
+  margin-right: 5rem;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1200px) {
   .gnav__list ul li {
     font-size: 1.2rem;
+    margin-right: 3rem;
   }
 }
 
@@ -290,7 +305,7 @@
 .gnav__join {
   background-color: #0a66ce;
   padding: 0 2rem 0 2rem;
-  margin: 1.5rem 0 1.5rem 1.5rem;
+  margin: 1.5rem 5rem 1.5rem 6rem;
   z-index: 5;
   height: 40px;
 }
@@ -340,6 +355,10 @@ footer
 
 .footer .logo {
   margin: 4rem 0 2rem 0;
+}
+
+.footer .logo a img {
+  width: 10rem;
 }
 
 .footer .btn {
@@ -428,7 +447,7 @@ body {
   line-height: 2;
   font-weight: 500;
   color: #fff;
-  background-color: #000000;
+  background-color: #8c7676;
 }
 
 img {

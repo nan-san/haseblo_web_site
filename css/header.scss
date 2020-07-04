@@ -11,26 +11,24 @@
   position: sticky;
   z-index: 100;
   max-width: $max-width;
-
-  .header__logo {
-    & img {
-      height: 5rem;
-    }
+  &__bg {
   }
+
   .header__main {
     display: flex;
     align-items: center;
-    // justify-content: space-around;
     align-items: flex-start;
+    background-color: #000;
+    height: 70px;
+    width: 100%;
   }
   &__left {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     width: 350px;
-    @media screen and (min-width: 768px) {
-      margin-left: -1rem;
-    }
+    margin-left: 2rem;
+    margin-top: 0.5rem;
   }
   &__left-top {
     display: flex;
@@ -38,7 +36,19 @@
     justify-content: center;
     width: 250px;
     height: 140px;
-    margin-left: 1rem;
+    margin-top: -1rem;
+    & img {
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+    }
+  }
+  .header__logo {
+    height: 70px;
+    & img {
+      width: 5rem;
+      margin-top: 0.3rem;
+    }
   }
 
   &__sub-title {
@@ -64,7 +74,9 @@
 .hamburger__menu
 =============*/
   .responsive__nav {
-    @media screen and (min-width: 1024px) {
+    // background: #000;
+    // height: 60px;
+    @media screen and (min-width: 1030px) {
       display: none;
     }
   }
@@ -126,7 +138,7 @@
   .toggle__btn {
     display: block;
     position: fixed;
-    top: 3rem;
+    top: 2rem;
     right: 3rem;
     width: 3rem;
     height: 3rem;
@@ -168,7 +180,7 @@
     transform: translateY(-1rem) rotate(315deg);
   }
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 1030px) {
     .toggle__btn span {
       display: none;
     }
@@ -198,27 +210,28 @@
 グローバルナビゲーション gnav
 =============*/
 .gnav {
-  @media screen and (max-width: 1024px) {
-    display: none;
-  }
+  width: 100%;
+  background: #000;
   background: #000;
   height: 70px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
-
+  justify-content: flex-end;
+  @media screen and (max-width: 1024px) {
+    background: #000;
+    display: none;
+  }
   &__list {
-    @media screen and (max-width: 1024px) {
-    }
     & ul {
       display: flex;
       width: 100%;
       & li {
-        line-height: 6.5rem;
+        line-height: 7rem;
         font-size: 1.4rem;
-        margin-right: 2rem;
-        @media screen and (max-width: 1024px) {
+        margin-right: 5rem;
+        @media screen and (max-width: 1200px) {
           font-size: 1.2rem;
+          margin-right: 3rem;
         }
         & a {
           color: #fff;
@@ -230,7 +243,7 @@
   &__join {
     background-color: $hover-color;
     padding: 0 2rem 0 2rem;
-    margin: 1.5rem 0 1.5rem 1.5rem;
+    margin: 1.5rem 5rem 1.5rem 6rem;
     z-index: 5;
     height: 40px;
 

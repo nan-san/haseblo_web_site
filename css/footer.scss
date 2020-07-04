@@ -13,6 +13,9 @@ footer
   }
   .logo {
     margin: 4rem 0 2rem 0;
+    & a img {
+      width: 10rem;
+    }
   }
   .btn {
     margin: 3.2rem;
