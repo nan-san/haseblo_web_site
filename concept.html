@@ -12,7 +12,7 @@
   </head>
   <body>
     <!-- ヘッダー読み込み部分▼▼▼ -->
-    <div id="header"></div>
+    <div id="header" class="header"></div>
     <!-- ヘッダー読み込み部分△△△ -->
 
     <!-- コンセプトセクション▼▼▼ -->
@@ -142,7 +142,9 @@
     <script type="text/javascript" src="js/script.js"></script>
     <script>
       $(function () {
-        $("#header").load("header.html");
+        $("#header").load("header.html", function () {
+          $.getScript("./js/script.js", function () {});
+        });
         $("#footer").load("footer.html");
       });
     </script>
