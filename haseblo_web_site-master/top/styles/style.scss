@@ -1,2 +1,54 @@
 @import 'modules/hero-slider';
 
+a {
+    text-decoration: none;
+}
+
+.mb-lr {
+    margin-bottom: 40px;
+}
+
+#content {
+    width: 90%;
+    height: 100%;
+    max-width: 1376px;
+    text-align: center;
+    margin: 5% auto;
+
+    .news {
+        background-color: gray;
+        font-size: 2rem;
+        @extend .mb-lr;
+    }
+
+    .aboutHaseblo {
+        background-image: url(../images/background-image.png);
+        background-size: cover;
+        background-position: center;
+        @extend .mb-lr;
+
+        .logo {
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        .aboutHaseblo__container {
+            display: flex;
+            flex-direction: column;
+
+            .aboutHaseblo__item {
+                & > img {
+                    width: 200px;
+                    background-color: blue;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .concept__btn {
+            background-color: transparent;
+            border: solid blue 2px;
+            padding: 2px 5px;
+        }
+    }
+}

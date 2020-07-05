@@ -8,4 +8,58 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+a {
+  text-decoration: none;
+}
+
+.mb-lr, #content .news, #content .aboutHaseblo {
+  margin-bottom: 40px;
+}
+
+#content {
+  width: 90%;
+  height: 100%;
+  max-width: 1376px;
+  text-align: center;
+  margin: 5% auto;
+}
+
+#content .news {
+  background-color: gray;
+  font-size: 2rem;
+}
+
+#content .aboutHaseblo {
+  background-image: url(../images/background-image.png);
+  background-size: cover;
+  background-position: center;
+}
+
+#content .aboutHaseblo .logo {
+  border-radius: 50%;
+  background-color: white;
+}
+
+#content .aboutHaseblo .aboutHaseblo__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#content .aboutHaseblo .aboutHaseblo__container .aboutHaseblo__item > img {
+  width: 200px;
+  background-color: blue;
+  border-radius: 50%;
+}
+
+#content .aboutHaseblo .concept__btn {
+  background-color: transparent;
+  border: solid blue 2px;
+  padding: 2px 5px;
+}
 /*# sourceMappingURL=style.css.map */
