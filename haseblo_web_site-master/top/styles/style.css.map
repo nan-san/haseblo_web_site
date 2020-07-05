@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,iBAAiB,CAAC;EACd,QAAQ,EAAE,OAAO;CAUpB;;AAXD,AAIY,iBAJK,CAEb,eAAe,CACX,aAAa,GACL,GAAG,CAAC;EACJ,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,KAAK;CACpB",
+    "sources": [
+        "style.scss",
+        "modules/_hero-slider.scss"
+    ],
+    "names": [],
+    "file": "style.css"
+}
