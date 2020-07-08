@@ -52,7 +52,7 @@ a {
                 height: 50px;
                 border-radius: 50%;
                 transform: translate(-50%, -50%);
-                background-color: magenta;
+                background-color: #cc00ba;
                 z-index: -1;
             }
         }
@@ -66,7 +66,7 @@ a {
             .aboutHaseblo__item {
                 & > img {
                     width: 200px;
-                    background-color: blue;
+                    background-color: #1167ce;
                     border-radius: 50%;
                 }
             }
@@ -75,7 +75,7 @@ a {
         // コンセプトページに飛ぶボタン
         .concept__btn {
             background-color: transparent;
-            border: solid blue 2px;
+            border: solid #1167ce 2px;
             padding: 2px 5px;
         }
     }
@@ -113,15 +113,13 @@ a {
             // 活動内容ページに飛ぶコンテナ
             .activity__container {
                 display: flex;
-                flex-direction: row;
-                flex-wrap: wrap;
+                flex-direction: column;
                 justify-content: space-around;
 
                 // 活動内容に飛ぶボタン
                 .activity__btn {
-                    flex-basis: calc(50% - 30px);
-                    margin-top: 30px;
-                    margin-bottom: 30px;
+                    width: 180px;
+                    margin: 30px auto;
                     font-size: 2.5rem;
                     background-color: transparent;
                     border: solid 1px white;
@@ -157,11 +155,15 @@ a {
                 // 活動内容に飛ぶコンテナ
                 // フレックスだとレイアウトが崩れるため、グリッドを使用
                 .activity__container {
-                    display: grid;
-                    grid-template-columns: 300px 300px;
-                    grid-template-rows: 130px 130px;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 700px;
+                    margin: auto;
+
                     .activity__btn {
                         font-size: 4rem;
+                        flex-basis: 250px ;
                     }
                 }
             }
