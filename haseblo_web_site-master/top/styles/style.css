@@ -1,5 +1,5 @@
 .swiper-container {
-  overflow: visible;
+  overflow: hidden;
 }
 
 .swiper-container .swiper-wrapper .swiper-slide > img {
