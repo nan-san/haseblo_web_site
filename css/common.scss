@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+@import "function";
+@import "header";
+@import "footer";
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6em;
+  font-family: "メイリオ", "Meiryo", "ＭＳ ゴシック",
+    "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", sans-serif;
+  line-height: 2;
+  font-weight: 500;
+  color: #fff;
+  background-color: #8c7676;
+}
+// .svg-bg {
+//   position: relative;
+// }
+img {
+  vertical-align: bottom;
+}
+
+.btn:hover {
+  color: $hover-color;
+}
+
+.container {
+  max-width: $max-width;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
