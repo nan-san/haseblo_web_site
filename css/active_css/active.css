@@ -15,6 +15,11 @@ main .activity_block .activity_text {
 }
 
 main .activity_block .activity_text::after {
+  content: "";
+  background: #cc008a;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -22,11 +27,6 @@ main .activity_block .activity_text::after {
   -webkit-transform: translateY(-50%) translateX(-50%);
   z-index: -1;
   margin: auto;
-  content: "";
-  background: #cc008a;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
 }
 
 main .activity_block .activity_subtext {
@@ -59,18 +59,18 @@ main .wrapper .main .item .activity_box .activity_box_main h3 {
 }
 
 main .wrapper .main .item .activity_box .activity_box_main h3::before {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
-  margin: auto;
-  z-index: -1;
-  left: 5px;
   content: "";
   background: #cc008a;
   width: 50px;
   height: 50px;
   border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  margin: auto;
+  z-index: -1;
 }
 
 main .wrapper .main .item .activity_box .activity_box_main img {
@@ -84,7 +84,6 @@ main .wrapper .main .item .activity_box .activity_box_main .activity_icon {
   display: block;
   width: 30%;
   height: 50px;
-  object-fit: contain;
   margin: 0 0 0 auto;
 }
 
