@@ -12,6 +12,7 @@
   </head>
   <body>
     <!-- ヘッダー読み込み -->
+
     <div id="header"></div>
 
     <!-- FAQ -->
@@ -56,13 +57,18 @@
       　　</div>
     </section>
 
+
+    <header id="header" class="header"></header>
+
     <!-- フッター読み込み -->
-    <div id="footer"></div>
+    <footer id="footer"></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script>
       $(function () {
-        $("#header").load("header.html");
+        $("#header").load("header.html", function () {
+          $.getScript("./js/script.js", function () {});
+        });
         $("#footer").load("footer.html");
       });
     </script>
