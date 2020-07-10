@@ -1,0 +1,172 @@
+@import 'modules/hero-slider';
+
+a {
+    text-decoration: none;
+}
+
+.mb-lr {
+    margin-bottom: 40px;
+}
+
+// contentのスタイル
+#content {
+    width: 90%;
+    height: 100%;
+    max-width: 1376px;
+    text-align: center;
+    margin: 5% auto;
+
+    // お知らせ
+    .news {
+        background-color: gray;
+        font-size: 2rem;
+        @extend .mb-lr;
+    }
+
+    // ハセブロについて
+    .aboutHaseblo {
+        background-image: url(../images/background-image.png);
+        background-size: cover;
+        background-position: center;
+        @extend .mb-lr;
+
+        // ロゴ
+        .logo {
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        // ハセブロについて　タイトル
+        .aboutHaseblo__title {
+            position: relative;
+            font-size: 3rem;
+            z-index: 2;
+
+            // タイトルの中心に丸い背景を挿入
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #cc00ba;
+                z-index: -1;
+            }
+        }
+
+        // ハセブロについて　（アイコン）
+        .aboutHaseblo__container {
+            display: flex;
+            flex-direction: column;
+
+            // アイコンのそれぞれにwidth・色・radiusを指定
+            .aboutHaseblo__item {
+                & > img {
+                    width: 200px;
+                    background-color: #1167ce;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        // コンセプトページに飛ぶボタン
+        .concept__btn {
+            background-color: transparent;
+            border: solid #1167ce 2px;
+            padding: 2px 5px;
+        }
+    }
+
+    // 活動内容
+    .activity {
+
+        // 活動内容のタイトル
+        .activity__title {
+            position: relative;
+            font-size: 3rem;
+            z-index: 2;
+
+            // タイトルの中心に丸い背景を挿入
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 50px;
+                height: 50px;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background-color: magenta;
+                z-index: -1;
+            }
+        }
+
+        // 背景を埋め込むためのインナー
+        .background__inner {
+            background-image: url(../images/background-image.png);
+            background-size: cover;
+            background-position: center;
+
+            // 活動内容ページに飛ぶコンテナ
+            .activity__container {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                // 活動内容に飛ぶボタン
+                .activity__btn {
+                    width: 180px;
+                    margin: 30px auto;
+                    font-size: 2.5rem;
+                    background-color: transparent;
+                    border: solid 1px white;
+
+                    // ボタンの中のアンカータグ
+                    a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// PC版のレスポンシブ
+@media (min-width: 767px) {
+    // contentのスタイル
+    #content {
+        // ハセブロについて
+        .aboutHaseblo{
+            // ハセブロについて　（アイコン）
+            .aboutHaseblo__container {
+                max-width: 800px;
+                margin: 50px auto;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+        }
+
+        .activity {
+            .background__inner {
+
+                // 活動内容に飛ぶコンテナ
+                .activity__container {
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    width: 767px;
+                    margin: auto;
+
+                    .activity__btn {
+                        width: 280px;
+                        font-size: 4rem;
+                    }
+                }
+            }
+        }
+    }
+}

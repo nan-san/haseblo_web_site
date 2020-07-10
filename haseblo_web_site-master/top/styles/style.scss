@@ -145,7 +145,7 @@ a {
                 max-width: 800px;
                 margin: 50px auto;
                 flex-direction: row;
-                justify-content: space-between;
+                justify-content: space-around;
             }
         }
 
@@ -153,17 +153,17 @@ a {
             .background__inner {
 
                 // 活動内容に飛ぶコンテナ
-                // フレックスだとレイアウトが崩れるため、グリッドを使用
                 .activity__container {
                     display: flex;
+                    justify-content: center;
                     flex-direction: row;
                     flex-wrap: wrap;
-                    width: 700px;
+                    width: 767px;
                     margin: auto;
 
                     .activity__btn {
+                        width: 280px;
                         font-size: 4rem;
-                        flex-basis: 250px ;
                     }
                 }
             }

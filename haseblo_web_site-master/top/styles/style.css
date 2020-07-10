@@ -145,27 +145,28 @@ a {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   #content .activity .background__inner .activity__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 700px;
+    width: 767px;
     margin: auto;
   }
   #content .activity .background__inner .activity__container .activity__btn {
+    width: 280px;
     font-size: 4rem;
-    -ms-flex-preferred-size: 250px;
-        flex-basis: 250px;
   }
 }
 /*# sourceMappingURL=style.css.map */
