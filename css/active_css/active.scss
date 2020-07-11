@@ -1,0 +1,126 @@
+@charset "utf-8";
+
+main {
+  .activity_block {
+    text-align: center;
+    padding: 15px;
+    .activity_title {
+      font-size: 35px;
+      font-weight: bold;
+      letter-spacing: 13px;
+    }
+    .activity_text {
+      font-size: 18px;
+      position: relative;
+      &::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        -webkit-transform: translateY(-50%) translateX(-50%);
+        z-index: -1;
+        margin: auto;
+        content: "";
+        background: #cc008a;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    .activity_subtext {
+      font-size: 14px;
+    }
+  }
+
+  .wrapper {
+    .main {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 20px;
+      .item {
+        .activity_box {
+          width: 85%;
+          margin: 0 auto;
+          margin-bottom: 80px;
+          .activity_box_main {
+            background-color: rgba(255, 255, 255, 0.105);
+            width: 100%;
+            padding: 10px;
+
+            h3 {
+              font-size: 25px;
+              font-weight: bold;
+              padding-left: 30px;
+              position: relative;
+              &::before {
+                position: absolute;
+                top: 50%;
+
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                margin: auto;
+                z-index: -1;
+                left: 5px;
+                content: "";
+                background: #cc008a;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+              }
+            }
+
+            img {
+              display: block;
+              width: 70%;
+              margin: 0 auto;
+              padding: 5px;
+            }
+            .activity_icon {
+              display: block;
+              width: 30%;
+              height: 50px;
+              object-fit: contain;
+              margin: 0 0 0 auto;
+            }
+          }
+          p {
+            padding-top: 15px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 画面幅767px以上
+@media screen and (min-width: 767px) {
+  main {
+    .activity_block {
+      .activity_title {
+        font-size: 40px;
+      }
+      .activity_text {
+        font-size: 25px;
+      }
+      .activity_subtext {
+        font-size: 16px;
+      }
+    }
+
+    .wrapper {
+      .main {
+        padding: 20px 50px;
+        .item {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .activity_box {
+            width: 45%;
+            margin: 0 0 80px;
+          }
+        }
+      }
+    }
+  }
+}
