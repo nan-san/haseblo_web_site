@@ -12,7 +12,16 @@ main {
     .activity_text {
       font-size: 18px;
       position: relative;
+
+      //擬似要素で赤丸を配置
       &::after {
+        content: "";
+        background: #cc008a;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        //赤丸を文字に被せる・上下左右中央へ
         position: absolute;
         top: 50%;
         left: 50%;
@@ -20,11 +29,6 @@ main {
         -webkit-transform: translateY(-50%) translateX(-50%);
         z-index: -1;
         margin: auto;
-        content: "";
-        background: #cc008a;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
       }
     }
     .activity_subtext {
@@ -52,20 +56,23 @@ main {
               font-weight: bold;
               padding-left: 30px;
               position: relative;
-              &::before {
-                position: absolute;
-                top: 50%;
 
-                transform: translateY(-50%);
-                -webkit-transform: translateY(-50%);
-                margin: auto;
-                z-index: -1;
-                left: 5px;
+              //擬似要素で赤丸を配置
+              &::before {
                 content: "";
                 background: #cc008a;
                 width: 50px;
                 height: 50px;
                 border-radius: 50%;
+
+                //赤丸を文字に被せる・上下中央・左から５px
+                position: absolute;
+                top: 50%;
+                left: 5px;
+                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                margin: auto;
+                z-index: -1;
               }
             }
 
@@ -79,8 +86,7 @@ main {
               display: block;
               width: 30%;
               height: 50px;
-              object-fit: contain;
-              margin: 0 0 0 auto;
+              margin: 0 0 0 auto; //右寄せ
             }
           }
           p {
