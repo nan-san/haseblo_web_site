@@ -12,6 +12,7 @@ main {
     .activity_text {
       font-size: 18px;
       position: relative;
+<<<<<<< HEAD
 
       //擬似要素で赤丸を配置
       &::after {
@@ -22,6 +23,9 @@ main {
         border-radius: 50%;
 
         //赤丸を文字に被せる・上下左右中央へ
+=======
+      &::after {
+>>>>>>> origin/haseblo_active
         position: absolute;
         top: 50%;
         left: 50%;
@@ -29,6 +33,14 @@ main {
         -webkit-transform: translateY(-50%) translateX(-50%);
         z-index: -1;
         margin: auto;
+<<<<<<< HEAD
+=======
+        content: "";
+        background: #cc008a;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+>>>>>>> origin/haseblo_active
       }
     }
     .activity_subtext {
@@ -56,6 +68,7 @@ main {
               font-weight: bold;
               padding-left: 30px;
               position: relative;
+<<<<<<< HEAD
 
               //擬似要素で赤丸を配置
               &::before {
@@ -69,10 +82,25 @@ main {
                 position: absolute;
                 top: 50%;
                 left: 5px;
+=======
+              &::before {
+                position: absolute;
+                top: 50%;
+
+>>>>>>> origin/haseblo_active
                 transform: translateY(-50%);
                 -webkit-transform: translateY(-50%);
                 margin: auto;
                 z-index: -1;
+<<<<<<< HEAD
+=======
+                left: 5px;
+                content: "";
+                background: #cc008a;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+>>>>>>> origin/haseblo_active
               }
             }
 
@@ -86,7 +114,12 @@ main {
               display: block;
               width: 30%;
               height: 50px;
+<<<<<<< HEAD
               margin: 0 0 0 auto; //右寄せ
+=======
+              object-fit: contain;
+              margin: 0 0 0 auto;
+>>>>>>> origin/haseblo_active
             }
           }
           p {
