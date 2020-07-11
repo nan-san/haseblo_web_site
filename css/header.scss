@@ -1,0 +1,267 @@
+@import "function";
+
+/*============
+.header
+=============*/
+.header {
+  top: 0;
+  left: 0;
+  margin: auto;
+  align-items: center;
+  position: sticky;
+  z-index: 100;
+  max-width: $max-width;
+  &__bg {
+  }
+
+  .header__main {
+    display: flex;
+    align-items: center;
+    align-items: flex-start;
+    background-color: #000;
+    height: 70px;
+    width: 100%;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 350px;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+  }
+  &__left-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 250px;
+    height: 140px;
+    margin-top: -1rem;
+    & img {
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+    }
+  }
+  .header__logo {
+    height: 70px;
+    & img {
+      width: 5rem;
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__sub-title {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+  }
+  &__title {
+    font-size: 2.5rem;
+    margin-top: -1rem;
+  }
+
+  /*============
+.header-top index.html用のheader
+=============*/
+  &__title-container {
+    padding-left: 1rem;
+  }
+  &__catch-copy {
+    font-size: 1rem;
+  }
+
+  /*============
+.hamburger__menu
+=============*/
+  .responsive__nav {
+    // background: #000;
+    // height: 60px;
+    @media screen and (min-width: 1030px) {
+      display: none;
+    }
+  }
+  .hamburger__menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -30rem;
+    bottom: 0;
+    width: 30rem;
+    background: #ffffff;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all 0.5s;
+    z-index: 3;
+    opacity: 0;
+  }
+  .open .hamburger__menu {
+    left: 0;
+    opacity: 1;
+  }
+  .hamburger__menu .inner {
+    padding: 2.2rem;
+  }
+  .hamburger__menu .inner ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hamburger__menu .inner ul li {
+    position: relative;
+    margin: 0;
+    border-bottom: 0.1rem solid #333;
+  }
+  .hamburger__menu .inner ul li a {
+    display: block;
+    color: #333;
+    font-size: 1.6rem;
+    padding: 1em;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  .hamburger__menu .inner ul li a:hover {
+    background: #e4e4e4;
+  }
+  @media screen and (max-width: 1024px) {
+    .hamburger__menu {
+      left: -22rem;
+      width: 22rem;
+    }
+    .header__nav ul li {
+      display: none;
+    }
+  }
+  /*============
+.toggle__btn
+=============*/
+  .toggle__btn {
+    display: block;
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    width: 3rem;
+    height: 3rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    z-index: 3;
+  }
+  .toggle__btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 3rem;
+    height: 0.2rem;
+    background-color: #ffffff;
+    border-radius: 0.4rem;
+    transition: all 0.5s;
+  }
+  .toggle__btn span:nth-child(1) {
+    top: 0.4rem;
+  }
+  .toggle__btn span:nth-child(2) {
+    top: 1.4rem;
+  }
+  .toggle__btn span:nth-child(3) {
+    bottom: 0.4rem;
+  }
+  .open .toggle__btn span {
+    background-color: #fff;
+  }
+  .open .toggle__btn span:nth-child(1) {
+    -webkit-transform: translateY(1rem) rotate(-315deg);
+    transform: translateY(1rem) rotate(-315deg);
+  }
+  .open .toggle__btn span:nth-child(2) {
+    opacity: 0;
+  }
+  .open .toggle__btn span:nth-child(3) {
+    -webkit-transform: translateY(-1rem) rotate(315deg);
+    transform: translateY(-1rem) rotate(315deg);
+  }
+
+  @media screen and (min-width: 1030px) {
+    .toggle__btn span {
+      display: none;
+    }
+  }
+  /*============
+#mask
+=============*/
+  #mask {
+    display: none;
+    transition: all 0.5s;
+  }
+  .open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    z-index: 2;
+    cursor: pointer;
+  }
+}
+
+/*============
+グローバルナビゲーション gnav
+=============*/
+.gnav {
+  width: 100%;
+  background: #000;
+  background: #000;
+  height: 70px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  @media screen and (max-width: 1024px) {
+    background: #000;
+    display: none;
+  }
+  &__list {
+    & ul {
+      display: flex;
+      width: 100%;
+      & li {
+        line-height: 7rem;
+        font-size: 1.4rem;
+        margin-right: 5rem;
+        @media screen and (max-width: 1200px) {
+          font-size: 1.2rem;
+          margin-right: 3rem;
+        }
+        & a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  &__join {
+    background-color: $hover-color;
+    padding: 0 2rem 0 2rem;
+    margin: 1.5rem 5rem 1.5rem 6rem;
+    z-index: 5;
+    height: 40px;
+
+    & a {
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none;
+      @media screen and (max-width: 1024px) {
+        font-size: 1.2rem;
+        vertical-align: -15%;
+      }
+    }
+  }
+  &__icon {
+    font-size: 2.8rem;
+    vertical-align: -10%;
+    @media screen and (max-width: 1024px) {
+      font-size: 2rem;
+    }
+  }
+}
