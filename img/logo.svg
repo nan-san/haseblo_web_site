@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="&#x30EC;&#x30A4;&#x30E4;&#x30FC;_1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="69.17px" height="75.69px"
+	 viewBox="0 0 69.17 75.69" style="enable-background:new 0 0 69.17 75.69;" xml:space="preserve">
+<style type="text/css">
+<![CDATA[
+	.st0{fill:url(#SVGID_1_);stroke:#FFFFFF;stroke-width:0.5;}
+	.st1{fill:url(#SVGID_2_);stroke:#FFFFFF;stroke-width:0.5;}
+]]>
+</style>
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="-5.3403" y1="22.4272" x2="55.1598" y2="84.4273">
+		<stop  offset="0" style="stop-color:#E62488"/>
+		<stop  offset="0.5091" style="stop-color:#2A61AD"/>
+		<stop  offset="1" style="stop-color:#2663AF"/>
+	</linearGradient>
+	<path class="st0" d="M10.488,0.271c0,0-10.11,3.889-10.11,12.645s0,50.209,0,50.209s-0.438,4.621,5.055,9.09
+		c3.283,2.891,7.515,3.063,8.524,3.063s2.978-0.141,10.125-4.063C33.02,66.247,38.52,63.06,38.52,63.06s0-25.479,0-24.771
+		c0,0.709,0.283-5.708-6.667-5.708c-6.949,0-7.059,5.37-7.167,8.333c0,1.75,0,22.167,0,22.167s0.167,1.25-1.083,1.25
+		c-1.583,0-11.282,0-11.553,0c-0.434,0-0.78-0.063-0.78-1.399V0.997C11.27,0.997,11.499,0.129,10.488,0.271z"/>
+	<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="17.5278" y1="0.1118" x2="78.0267" y2="62.1106">
+		<stop  offset="0" style="stop-color:#E62488"/>
+		<stop  offset="0.5091" style="stop-color:#2A61AD"/>
+		<stop  offset="1" style="stop-color:#2663AF"/>
+	</linearGradient>
+	<path class="st1" d="M24.478,5.664c0,0,0,20.495,0,21c0,1.63,1.062,0.25,1.573-0.26c1.153-1.153,3.657-5.073,11.698-4.927
+		c4.426,0,7.728,1.903,9.208,3.083s4.781,3.771,4.781,12.094c0,9.906,0,18.5,0,18.5s10.438-5.188,13.656-8.594
+		c2.875-2.563,3.438-7.391,3.438-9.406c0-6.031-4.661-9.037-5.449-9.615C62.596,26.96,25.551,5.185,25.551,5.185
+		S24.478,4.58,24.478,5.664z"/>
+</g>
+</svg>

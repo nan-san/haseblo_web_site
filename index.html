@@ -11,8 +11,9 @@
   </head>
 
   <body>
-    <!-- header読み込み -->
-    <div id="header"></div>
+    <!-- ヘッダー読み込み -->
+
+    <header id="header" class="header header-top"></header>
 
     <main>
       <br />
@@ -56,13 +57,15 @@
       <br />
       <br />
     </main>
-
-    <div id="footer"></div>
+    <!-- フッター読み込み -->
+    <footer id="footer"></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script>
       $(function () {
-        $("#header").load("header.html");
+        $("#header").load("header-top.html", function () {
+          $.getScript("./js/script.js", function () {});
+        });
         $("#footer").load("footer.html");
       });
     </script>
