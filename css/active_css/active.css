@@ -84,7 +84,8 @@ main .wrapper .main .item .activity_box .activity_box_main .activity_icon {
   display: block;
   width: 30%;
   height: 50px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 0 0 0 auto;
 }
 
@@ -107,12 +108,18 @@ main .wrapper .main .item .activity_box p {
     padding: 20px 50px;
   }
   main .wrapper .main .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   main .wrapper .main .item .activity_box {
     width: 45%;
     margin: 0 0 80px;
   }
 }
+/*# sourceMappingURL=active.css.map */

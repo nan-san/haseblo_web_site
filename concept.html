@@ -9,128 +9,171 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/concept.css" />
+    <link rel="stylesheet" href="css/animate.css">
+
+    <!--JS-->
+  <script src="/js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
   </head>
+
   <body>
     <!-- ヘッダー読み込み部分▼▼▼ -->
     <div id="header" class="header"></div>
     <!-- ヘッダー読み込み部分△△△ -->
 
-    <!-- コンセプトセクション▼▼▼ -->
-    <section class="concept">
-      <h2 class="section__title">コンセプト</h2>
+  <!--コンセプトセクション▼▼▼-->
+  <section class="concept">
+    <h2 class="section__title">コンセプト</h2>
+    <!--コンテイナー部分▼▼▼-->
+    <div class="concept__container container">
+      <h3 class="concept__subtitle">
+        皆で協力しあい、問題解決能力を高める。
+      </h3>
+      <div class="txt__container">
+        <p class="concept__txt">
+          オンラインサロン・ハセブロは、案件獲得をめざす<br>エンジニア向けのコミュニティサロンです。
+        </p>
+        <p class="concept__txt"> 
+          おひとりでは解決できなかった問題を仲間と共有し、解決方法を導き出しましょう。 
+        </p>
+        <p class="concept__txt">
+        エンジニアに必要なマインドとは何なのか？ 
+        </p>
+        <p class="concept__txt">
+          プロの指導・助言を受けながら、お互いに情報交換し<br>切磋琢磨しながら成長できる場を目指しています。
+        </p>
+      </div><!-- /.txt__container -->
 
-      <!-- コンテント部▼▼▼ -->
-      <div class="content__wrapper">
-        <h3 class="section__subtitle">
-          皆で協力しあい、問題解決能力を高める。
-        </h3>
+      <!--イメージアイコン部分▼▼▼  -->
+      <div class="concept__items">
 
-        <!-- テキスト部分 ▼▼▼-->
-        <div class="text__wrappr">
-          <p class="concept__text">
-            オンラインサロン・ハセブロは、案件獲得をめざす<br clsss="br__sp">エンジニア向けのコミュニティサロンです。
-          </p>
-          <p class="concept__text">
-            おひとりでは解決できなかった問題を仲間と共有し、<br class ="br__sp">解決方法を導き出しましょう。
-          </p>
-          <p class="concept__text">
-            エンジニアに必要なマインドとは何なのか？
-          </p>
-          <p class="concept__text">
-            プロの指導・助言を受けながら、お互いに情報交換し切磋琢磨<br class="br__sp">しながら成長できる場を目指しています。（仮）
-          </p>
-        </div>
-        <!-- テキスト部分△△△ -->
+        <!-- アイコン１ -->
+        <div class="wow fadeInDown concept__item" 
+            data-wow-duration="3s" 
+            data-wow-delay="0s" 
+            data-wow-offset="10"
+            data-wow-iteration="1">
+            <a class="media" href="">
+              <img src="./img/pink1_1.png" alt="" class="media__img">
+              <p class="media__body media__title">
+                協力して学ぶ
+              </p>
+            </a>
+        </div><!-- !wow fadeInDown concept__item-->
 
-        <!--イメージアイコン部分▼▼▼  -->
-        <div class="img__wrapper">
+        <!-- アイコン２ -->
+        <div class="wow fadeInDown concept__item" 
+            data-wow-duration="3s" 
+            data-wow-delay="0.4s" 
+            data-wow-offset="10"
+            data-wow-iteration="1">
+          <a class="media" href="">
+            <img src="./img/blue1_1.png" alt="" class="media__img">
+            <p class="media__title media__body">
+              チームで案件獲得
+            </p>
+          </a>
+        </div><!-- !wow fadeInDown concept__item-->
 
-          <div class="icon">
-            <a href="#"><img src="img/pink1_1.png" alt="" /></a>
-            <p class="icon__text">協力して学ぶ</p>
-          </div>
-          <div class="icon">
-            <a href="#"><img src="img/blue1_1.png" alt="" /></a>
-            <p class="icon__text">チームで案件獲得</p>
-          </div>
+        <!-- アイコン３ -->
+        <div class="wow fadeInDown concept__item" 
+            data-wow-duration="3s" 
+            data-wow-delay="0.8s" 
+            data-wow-offset="10"
+            data-wow-iteration="1">
+          <a class="media" href="">
+            <img src="./img/pink2_2.png" alt="" class="media__img">
+            <p class="media__title media__body">
+              エンジニアマインドを<br>育む
+            </p>
+          </a>
+        </div><!-- !wow fadeInDown concept__item-->
 
-          <div class="icon">
-            <a href="#"><img src="img/pink2_2.png" alt="" /></a>
-            <p class="icon__text">エンジニアマインドを育む</p>
-          </div>
+        <!-- アイコン４ -->
+        <div class="wow fadeInDown concept__item" 
+            data-wow-duration="3s" 
+            data-wow-delay="0.4s" 
+            data-wow-offset="10"
+            data-wow-iteration="1">
+          <a class="media" href="">
+            <img src="./img/blue2_2.png" alt="" class="media__img">
+            <p class="media__title media__body">
+              問題解決力向上
+            </p>
+          </a>
+        </div><!-- !wow fadeInDown concept__item-->
 
-          <div class="icon">
-            <a href="#"><img src="img/blue2_2.png" alt="" /></a>
-            <p class="icon__text">問題解決力向上</p>
-          </div>
+        <!-- アイコン５ -->
+        <div class="wow fadeInDown concept__item" 
+            data-wow-duration="3s" 
+            data-wow-delay="0.8s" 
+            data-wow-offset="10"
+            data-wow-iteration="1">
+          <a class="media" href="">
+              <img src="./img/143872.png" alt="" class="media__img">
+              <p class="media__title media__body">
+                楽しむ
+              </p>
+          </a>
+        </div><!-- !wow fadeInDown concept__item-->
 
-          <div class="icon">
-            <a href="#"><img src="/img/143872.png" alt="" /></a>
-            <p class="icon__text">楽しむ</p>
-          </div>
+        <!-- アイコン６ -->
+        <div class="wow fadeInDown concept__item" 
+            data-wow-duration="3s" 
+            data-wow-delay="1.2s" 
+            data-wow-offset="10"
+            data-wow-iteration="1">
+          <a class="media" href="">
+              <img src="./img/blue3_3.png" alt="" class="media__img">
+              <p class="media__title media__body">
+                ゼロベース思考
+              </p>
+          </a>
+        </div><!-- !wow fadeInDown concept__item-->
 
-          <div class="icon">
-            <a href="#"><img src="img/blue3_3.png" alt="" /></a>
-            <p class="icon__text">ゼロベース思考</p>
-          </div>
+      </div><!--!concept__items-->
+      <!--イメージアイコン部分△△△ -->
+    </div>
+    <!--コンテナー部分△△△-->
+  </section>
+  <!--コンセプトセクション△△△-->
 
-        </div>
-        <!-- イメージアイコン部分△△△ -->
-      </div>
-      <!-- コンテント部△△△ -->
-    </section>
-    <!-- コンセプト部分△△△ -->
-
-    <!-- 代表紹介セクション▼▼▼ -->
-    <section class="introduction">
-      <h2 class="section__title">代表紹介</h2>
-      
-      <!-- コンテント部▼▼▼ -->
-      <div class="content__wrapper">
-
-        <!-- 紹介部▼▼▼ -->
+  <!--イントロダクションセクション▼▼▼-->
+  <section class="introduction">
+    <h2 class="section__title">代表紹介</h2>
+    <!--コンテイナー部分▼▼▼-->
+    <div class="introduction__container container">
+      <!-- 紹介部▼▼▼ -->
+      <div class="introduction__items">
+        <!-- 紹介部左側▼▼▼ -->
         <div class="introduction__item">
-
-          <!-- 紹介部左側▼▼▼ -->
-          <div class="item__left">
-            <img src="./img/hasebesan_1.png" alt="" />
+          <div class="introduction__img">
+            <img src="./img/hasebesan_1.png" alt="">
           </div>
-          <!-- 紹介部左側△△△ -->
-
-          <!-- 紹介部右側▼▼▼ -->
-          <div class="item__right">
-            <h3 class="sub__title">
-              長谷部  雄介
-            </h3>
-            <p class="item__text">
-              日経グループのエンジニア指導者。
-            </p>
-            <p class="item__text">
-              過去に東芝・三菱 UFJ銀行<br class="br__sp">・日立製作所・富士通のシステム開発を担当。
-            </p>
-            <p class="item__text">
-              エンジニアのためのオンラインサロン
-            </p>
-            <p class="item__text">
-              <a href="index.html" class="link">
-              　『#ハセブロ』　
-              </a>
-            </p>
-            <p class="item__text">を
-              運営。マイアプリ(iOS)
-            </p>
-            
-            <button class="btn carrer__btn">代表経歴はこちら</button>
-          </div>
-          <!-- 紹介部右側△△△-->
-
         </div>
-        <!-- 紹介部△△△ -->
+        <!-- 紹介部左側△△△ -->
+        
+        <!-- 紹介部右側▼▼▼ -->
+        <div class="introduction__item">
+          <div class="media__body">
+            <div class="media__name">長谷部　雄介</div>
+            <p class="media__txt">現日経グループのエンジニア指導者。<br class="sp__br">過去に『東芝』、『三菱UFJ銀行』、『日立製作所』、『富士通』のシステム開発を担当。 
+            <br>エンジニアのためのオンラインサロン『<a href="https://twitter.com/hbOnlineSalon" class="app__link">#ハセブロ</a>』を
+              運営。<!--ハセブロオンラインサロン公式twitterへリンク-->
+            <br>マイアプリ(iOS)▶︎<click!! href="https://t.co/PZk1WJTMjG?amp=1" class="app__link">click!!</a></p><!--マイアプリページへリンク-->
+            <a href="https://haseblog.org/profile/" class="media__btn">代表経歴はこちら</a><!--ハセブロオンラインサロンプロフィール画面へリンク-->
+          </div>
+        </div>
+        <!-- 紹介部右側△△△ -->
       </div>
-      <!-- コンテント部△△△ -->
-    </section>
-
-    <!-- 代表紹介セクション△△△ -->
+      <!-- 紹介部△△△ -->
+    </div>
+    <!--コンテイナー部分△△△-->
+  </section>
+  <!--イントロダクションセクション△△△-->
+  
 
     <!-- フッター読み込み部分 -->
     <div id="footer"></div>
@@ -148,5 +191,9 @@
         $("#footer").load("footer.html");
       });
     </script>
+
+    <!--jQuery読み込み▼▼▼-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   </body>
 </html>
