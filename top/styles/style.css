@@ -1,4 +1,6 @@
+@charset "UTF-8";
 .swiper-container {
+  padding-top: 50px;
   overflow: hidden;
 }
 
@@ -13,11 +15,15 @@
      object-fit: cover;
 }
 
+body {
+  background-color: black;
+}
+
 a {
   text-decoration: none;
 }
 
-.mb-lr, #content .news, #content .aboutHaseblo {
+.mb-lr, #content .bg__img-haseblo .aboutHaseblo {
   margin-bottom: 40px;
 }
 
@@ -29,29 +35,39 @@ a {
   margin: 5% auto;
 }
 
-#content .news {
-  background-color: gray;
-  font-size: 2rem;
-}
-
-#content .aboutHaseblo {
+#content .bg__img-haseblo {
   background-image: url(../images/background-image.png);
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 0;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
 
-#content .aboutHaseblo .logo {
+#content .bg__img-haseblo::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#content .bg__img-haseblo .aboutHaseblo .logo {
   border-radius: 50%;
   background-color: white;
 }
 
-#content .aboutHaseblo .aboutHaseblo__title {
+#content .bg__img-haseblo .aboutHaseblo .aboutHaseblo__title {
   position: relative;
   font-size: 3rem;
   z-index: 2;
 }
 
-#content .aboutHaseblo .aboutHaseblo__title::before {
+#content .bg__img-haseblo .aboutHaseblo .aboutHaseblo__title::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -65,7 +81,7 @@ a {
   z-index: -1;
 }
 
-#content .aboutHaseblo .aboutHaseblo__container {
+#content .bg__img-haseblo .aboutHaseblo .aboutHaseblo__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -75,16 +91,26 @@ a {
           flex-direction: column;
 }
 
-#content .aboutHaseblo .aboutHaseblo__container .aboutHaseblo__item > img {
+#content .bg__img-haseblo .aboutHaseblo .aboutHaseblo__container .aboutHaseblo__item > img {
   width: 200px;
   background-color: #1167ce;
   border-radius: 50%;
 }
 
-#content .aboutHaseblo .concept__btn {
+#content .bg__img-haseblo .aboutHaseblo .concept__btn {
   background-color: transparent;
   border: solid #1167ce 2px;
-  padding: 2px 5px;
+  width: 300px;
+  padding: 10px 0;
+  font-size: 2.5rem;
+}
+
+#content .bg__img-haseblo .aboutHaseblo .concept__btn a {
+  color: #1167ce;
+}
+
+#content .activity {
+  margin-top: 40px;
 }
 
 #content .activity .activity__title {
@@ -103,7 +129,7 @@ a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 50%;
-  background-color: magenta;
+  background-color: #cc00ba;
   z-index: -1;
 }
 
@@ -111,6 +137,20 @@ a {
   background-image: url(../images/background-image.png);
   background-size: cover;
   background-position: center;
+  position: relative;
+  z-index: 0;
+  padding-bottom: 40px;
+}
+
+#content .activity .background__inner::before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 #content .activity .background__inner .activity__container {
@@ -121,24 +161,93 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #content .activity .background__inner .activity__container .activity__btn {
-  width: 180px;
   margin: 30px auto;
-  font-size: 2.5rem;
+  font-size: 3rem;
   background-color: transparent;
-  border: solid 1px white;
+  border: none;
+  visibility: hidden;
 }
 
 #content .activity .background__inner .activity__container .activity__btn a {
+  display: block;
+  border: solid 1px white;
   color: white;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 0;
+  visibility: visible;
+}
+
+#content .activity .background__inner .activity__container .activity__btn a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#content .activity .background__inner .portfolio__contest {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+#content .activity .background__inner .portfolio__contest ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+#content .activity .background__inner .portfolio__contest ul li {
+  width: calc(100% / 5);
+}
+
+#content .activity .background__inner .portfolio__contest ul li img {
+  width: 100%;
+}
+
+#content .activity .background__inner .portfolio__contest .contest__text h3 {
+  display: inline;
+  background: #ffc1c1;
+  padding: 10px 36px;
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#content .activity .background__inner .portfolio__contest .contest__text h4 {
+  white-space: nowrap;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: rgba(225, 225, 225, 0.8);
+  padding: 10px 72px;
+  border-radius: 60px;
+  color: #000;
+  font-size: 2rem;
+}
+
+#content .activity .background__inner .portfolio__contest .nav {
+  border: 3px solid #f600a6;
+  width: 300px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#content .activity .background__inner .portfolio__contest .nav a {
+  color: #f600a6;
+  font-size: 2.5rem;
 }
 
 @media (min-width: 767px) {
-  #content .aboutHaseblo .aboutHaseblo__container {
+  #content .bg__img-haseblo .aboutHaseblo .aboutHaseblo__container {
     max-width: 800px;
     margin: 50px auto;
     -webkit-box-orient: horizontal;
@@ -161,12 +270,48 @@ a {
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    width: 767px;
-    margin: auto;
   }
   #content .activity .background__inner .activity__container .activity__btn {
-    width: 280px;
+    width: calc(50% - 60px);
+  }
+  #content .activity .background__inner .activity__container .activity__btn:nth-child(odd) a {
+    margin-right: 0;
+  }
+  #content .activity .background__inner .activity__container .activity__btn:nth-child(even) a {
+    margin-left: 0;
+  }
+  #content .activity .background__inner .portfolio__contest {
+    position: relative;
+  }
+  #content .activity .background__inner .portfolio__contest .contest__text {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    /*位置調整*/
+  }
+  #content .activity .background__inner .portfolio__contest .contest__text h3 {
+    font-size: 2rem;
+  }
+  #content .activity .background__inner .portfolio__contest .contest__text h4 {
+    margin-top: 30px;
     font-size: 4rem;
+  }
+  #content .activity .background__inner .portfolio__contest .nav {
+    border: 3px solid #f600a6;
+  }
+  #content .activity .background__inner .portfolio__contest .nav a {
+    color: #f600a6;
+  }
+}
+
+@media (min-width: 1366px) {
+  .portfolio__contest .contest__text h3 {
+    font-size: 4rem !important;
+  }
+  .portfolio__contest .contest__text h4 {
+    font-size: 6rem !important;
   }
 }
 /*# sourceMappingURL=style.css.map */
