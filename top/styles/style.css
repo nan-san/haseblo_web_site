@@ -23,14 +23,10 @@ a {
   text-decoration: none;
 }
 
-.mb-lr, #content .bg__img-haseblo .aboutHaseblo {
-  margin-bottom: 40px;
-}
-
 #content {
   width: 90%;
   height: 100%;
-  max-width: 1376px;
+  max-width: 1367px;
   text-align: center;
   margin: 5% auto;
 }
@@ -79,6 +75,11 @@ a {
           transform: translate(-50%, -50%);
   background-color: #cc00ba;
   z-index: -1;
+}
+
+#content .bg__img-haseblo .aboutHaseblo .aboutHaseblo__detail {
+  width: 90%;
+  margin: 0 5%;
 }
 
 #content .bg__img-haseblo .aboutHaseblo .aboutHaseblo__container {
@@ -151,6 +152,11 @@ a {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+#content .activity .background__inner .activity__detail {
+  width: 90%;
+  margin: 0 5%;
 }
 
 #content .activity .background__inner .activity__container {

@@ -8,15 +8,11 @@ a {
     text-decoration: none;
 }
 
-.mb-lr {
-    margin-bottom: 40px;
-}
-
 // contentのスタイル
 #content {
     width: 90%;
     height: 100%;
-    max-width: 1376px;
+    max-width: 1367px;
     text-align: center;
     margin: 5% auto;
 
@@ -43,7 +39,6 @@ a {
         }
 
         .aboutHaseblo {
-            @extend .mb-lr;
             
             // ロゴ
             .logo {
@@ -70,6 +65,12 @@ a {
                     background-color: #cc00ba;
                     z-index: -1;
                 }
+            }
+
+            // ハセブロについて詳細
+            .aboutHaseblo__detail {
+                width: 90%;
+                margin: 0 5%;
             }
             
             // ハセブロについて　（アイコン）
@@ -148,6 +149,12 @@ a {
                 z-index: -1;
             }
             
+            // 活動内容詳細
+            .activity__detail {
+                width: 90%;
+                margin: 0 5%;
+            }
+
             // 活動内容ページに飛ぶコンテナ
             .activity__container {
                 display: flex;
