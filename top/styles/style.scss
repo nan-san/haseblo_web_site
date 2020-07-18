@@ -23,6 +23,7 @@ a {
         z-index: 0;
         padding-top: 40px;
         padding-bottom: 40px;
+        background-attachment: fixed;
         
         // 背景の上にぼかしのための背景色を絶対配置
         &::before {
@@ -136,6 +137,7 @@ a {
             position: relative;
             z-index: 0;
             padding-bottom: 40px;
+            background-attachment: fixed;
 
             // 背景の上にぼかしのための背景色を絶対配置
             &::before {
