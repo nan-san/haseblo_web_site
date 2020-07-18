@@ -1,6 +1,6 @@
 @charset "UTF-8";
 .swiper-container {
-  padding-top: 50px;
+  padding-top: 60px;
   overflow: hidden;
 }
 
@@ -24,9 +24,7 @@ a {
 }
 
 #content {
-  width: 90%;
   height: 100%;
-  max-width: 1367px;
   text-align: center;
   margin: 5% auto;
 }
@@ -50,6 +48,11 @@ a {
   width: 100%;
   height: 100%;
   z-index: -1;
+}
+
+#content .bg__img-haseblo .aboutHaseblo {
+  max-width: 1367px;
+  margin: 0 auto;
 }
 
 #content .bg__img-haseblo .aboutHaseblo .logo {
@@ -154,12 +157,17 @@ a {
   z-index: -1;
 }
 
-#content .activity .background__inner .activity__detail {
+#content .activity .background__inner .activity__inner {
+  max-width: 1367px;
+  margin: 0 auto;
+}
+
+#content .activity .background__inner .activity__inner .activity__detail {
   width: 90%;
   margin: 0 5%;
 }
 
-#content .activity .background__inner .activity__container {
+#content .activity .background__inner .activity__inner .activity__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -172,7 +180,7 @@ a {
           justify-content: center;
 }
 
-#content .activity .background__inner .activity__container .activity__btn {
+#content .activity .background__inner .activity__inner .activity__container .activity__btn {
   margin: 30px auto;
   font-size: 3rem;
   background-color: transparent;
@@ -180,7 +188,7 @@ a {
   visibility: hidden;
 }
 
-#content .activity .background__inner .activity__container .activity__btn a {
+#content .activity .background__inner .activity__inner .activity__container .activity__btn a {
   display: block;
   border: solid 1px white;
   color: white;
@@ -190,17 +198,17 @@ a {
   visibility: visible;
 }
 
-#content .activity .background__inner .activity__container .activity__btn a:hover {
+#content .activity .background__inner .activity__inner .activity__container .activity__btn a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-#content .activity .background__inner .portfolio__contest {
+#content .activity .background__inner .activity__inner .portfolio__contest {
   width: 90%;
   margin: 0 auto;
   margin-top: 60px;
 }
 
-#content .activity .background__inner .portfolio__contest ul {
+#content .activity .background__inner .activity__inner .portfolio__contest ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,15 +220,15 @@ a {
   margin-bottom: 30px;
 }
 
-#content .activity .background__inner .portfolio__contest ul li {
+#content .activity .background__inner .activity__inner .portfolio__contest ul li {
   width: calc(100% / 5);
 }
 
-#content .activity .background__inner .portfolio__contest ul li img {
+#content .activity .background__inner .activity__inner .portfolio__contest ul li img {
   width: 100%;
 }
 
-#content .activity .background__inner .portfolio__contest .contest__text h3 {
+#content .activity .background__inner .activity__inner .portfolio__contest .contest__text h3 {
   display: inline;
   background: #ffc1c1;
   padding: 10px 36px;
@@ -229,7 +237,7 @@ a {
   font-weight: bold;
 }
 
-#content .activity .background__inner .portfolio__contest .contest__text h4 {
+#content .activity .background__inner .activity__inner .portfolio__contest .contest__text h4 {
   white-space: nowrap;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -240,14 +248,14 @@ a {
   font-size: 2rem;
 }
 
-#content .activity .background__inner .portfolio__contest .nav {
+#content .activity .background__inner .activity__inner .portfolio__contest .nav {
   border: 3px solid #f600a6;
   width: 300px;
   margin: 0 auto;
   padding: 10px 0;
 }
 
-#content .activity .background__inner .portfolio__contest .nav a {
+#content .activity .background__inner .activity__inner .portfolio__contest .nav a {
   color: #f600a6;
   font-size: 2.5rem;
 }
@@ -263,7 +271,10 @@ a {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
-  #content .activity .background__inner .activity__container {
+  #content .activity .background__inner .activity__inner {
+    max-width: 1367px;
+  }
+  #content .activity .background__inner .activity__inner .activity__container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -277,19 +288,19 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  #content .activity .background__inner .activity__container .activity__btn {
+  #content .activity .background__inner .activity__inner .activity__container .activity__btn {
     width: calc(50% - 60px);
   }
-  #content .activity .background__inner .activity__container .activity__btn:nth-child(odd) a {
+  #content .activity .background__inner .activity__inner .activity__container .activity__btn:nth-child(odd) a {
     margin-right: 0;
   }
-  #content .activity .background__inner .activity__container .activity__btn:nth-child(even) a {
+  #content .activity .background__inner .activity__inner .activity__container .activity__btn:nth-child(even) a {
     margin-left: 0;
   }
-  #content .activity .background__inner .portfolio__contest {
+  #content .activity .background__inner .activity__inner .portfolio__contest {
     position: relative;
   }
-  #content .activity .background__inner .portfolio__contest .contest__text {
+  #content .activity .background__inner .activity__inner .portfolio__contest .contest__text {
     position: absolute;
     top: 20%;
     left: 50%;
@@ -297,17 +308,17 @@ a {
             transform: translateX(-50%);
     /*位置調整*/
   }
-  #content .activity .background__inner .portfolio__contest .contest__text h3 {
+  #content .activity .background__inner .activity__inner .portfolio__contest .contest__text h3 {
     font-size: 2rem;
   }
-  #content .activity .background__inner .portfolio__contest .contest__text h4 {
+  #content .activity .background__inner .activity__inner .portfolio__contest .contest__text h4 {
     margin-top: 30px;
     font-size: 4rem;
   }
-  #content .activity .background__inner .portfolio__contest .nav {
+  #content .activity .background__inner .activity__inner .portfolio__contest .nav {
     border: 3px solid #f600a6;
   }
-  #content .activity .background__inner .portfolio__contest .nav a {
+  #content .activity .background__inner .activity__inner .portfolio__contest .nav a {
     color: #f600a6;
   }
 }

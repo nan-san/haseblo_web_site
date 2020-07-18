@@ -37,7 +37,6 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  background-color: #000;
   height: 70px;
   width: 100%;
 }

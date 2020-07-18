@@ -10,12 +10,10 @@ a {
 
 // contentのスタイル
 #content {
-    width: 90%;
     height: 100%;
-    max-width: 1367px;
     text-align: center;
     margin: 5% auto;
-
+    
     // ハセブロについて
     .bg__img-haseblo {
         background-image: url(../images/background-image.png);
@@ -25,7 +23,7 @@ a {
         z-index: 0;
         padding-top: 40px;
         padding-bottom: 40px;
-
+        
         // 背景の上にぼかしのための背景色を絶対配置
         &::before {
             content: '';
@@ -37,8 +35,10 @@ a {
             height: 100%;
             z-index: -1;
         }
-
+        
         .aboutHaseblo {
+            max-width: 1367px;
+            margin: 0 auto;
             
             // ロゴ
             .logo {
@@ -148,101 +148,105 @@ a {
                 height: 100%;
                 z-index: -1;
             }
-            
-            // 活動内容詳細
-            .activity__detail {
-                width: 90%;
-                margin: 0 5%;
-            }
+            .activity__inner {
 
-            // 活動内容ページに飛ぶコンテナ
-            .activity__container {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                
-                // 活動内容に飛ぶボタン
-                .activity__btn {
-                    margin: 30px auto;
-                    font-size: 3rem;
-                    background-color: transparent;
-                    border: none;
-                    visibility: hidden;
+                max-width: 1367px;
+                margin: 0 auto;
+                // 活動内容詳細
+                .activity__detail {
+                    width: 90%;
+                    margin: 0 5%;
+                }
+    
+                // 活動内容ページに飛ぶコンテナ
+                .activity__container {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     
-                    // ボタンの中のアンカータグ
-                    a {
-                        display: block;
-                        border: solid 1px white;
-                        color: white;
+                    // 活動内容に飛ぶボタン
+                    .activity__btn {
+                        margin: 30px auto;
+                        font-size: 3rem;
+                        background-color: transparent;
+                        border: none;
+                        visibility: hidden;
+                        
+                        // ボタンの中のアンカータグ
+                        a {
+                            display: block;
+                            border: solid 1px white;
+                            color: white;
+                            width: 300px;
+                            margin: 0 auto;
+                            padding: 10px 0;
+                            visibility: visible;
+                            
+                            &:hover {
+                                background-color: rgba(#fff, 0.3);
+                            }
+                        }
+                    }
+                }
+    
+                // ポートフォリオ大会
+                .portfolio__contest {
+                    width: 90%;
+                    margin: 0 auto;
+                    margin-top: 60px;
+    
+                    // ポートフォリオ大会の画像
+                    ul {
+                        display: flex;
+                        justify-content: center;
+                        flex-wrap: wrap;
+                        margin-bottom: 30px;
+    
+    
+                        li {
+                            width: calc(100% / 5);
+    
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+    
+                    // ポートフォリオ大会のテキスト
+                    .contest__text {
+    
+                        h3 {
+                            display: inline;
+                            background: #ffc1c1;
+                            padding: 10px 36px;
+                            color: #000;
+                            font-size: 1.5rem;
+                            font-weight: bold;
+                        }
+    
+                        h4 {
+                            white-space: nowrap;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                            background: rgba(225, 225, 225, 0.8);
+                            padding: 10px 72px;
+                            border-radius: 60px;
+                            color: #000;
+                            font-size: 2rem;
+                        }
+                    }
+    
+                    // 活動内容ページに飛ぶボタン
+                    .nav {
+                        border: 3px solid #f600a6;
                         width: 300px;
                         margin: 0 auto;
                         padding: 10px 0;
-                        visibility: visible;
                         
-                        &:hover {
-                            background-color: rgba(#fff, 0.3);
+                        a {
+                            color: #f600a6;
+                            font-size: 2.5rem;
                         }
-                    }
-                }
-            }
-
-            // ポートフォリオ大会
-            .portfolio__contest {
-                width: 90%;
-                margin: 0 auto;
-                margin-top: 60px;
-
-                // ポートフォリオ大会の画像
-                ul {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    margin-bottom: 30px;
-
-
-                    li {
-                        width: calc(100% / 5);
-
-                        img {
-                            width: 100%;
-                        }
-                    }
-                }
-
-                // ポートフォリオ大会のテキスト
-                .contest__text {
-
-                    h3 {
-                        display: inline;
-                        background: #ffc1c1;
-                        padding: 10px 36px;
-                        color: #000;
-                        font-size: 1.5rem;
-                        font-weight: bold;
-                    }
-
-                    h4 {
-                        white-space: nowrap;
-                        margin-top: 20px;
-                        margin-bottom: 20px;
-                        background: rgba(225, 225, 225, 0.8);
-                        padding: 10px 72px;
-                        border-radius: 60px;
-                        color: #000;
-                        font-size: 2rem;
-                    }
-                }
-
-                // 活動内容ページに飛ぶボタン
-                .nav {
-                    border: 3px solid #f600a6;
-                    width: 300px;
-                    margin: 0 auto;
-                    padding: 10px 0;
-                    
-                    a {
-                        color: #f600a6;
-                        font-size: 2.5rem;
                     }
                 }
             }
@@ -269,56 +273,58 @@ a {
         // 活動内容
         .activity {
             .background__inner {
-
-                // 活動内容に飛ぶコンテナ
-                .activity__container {
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: row;
-                    flex-wrap: wrap;
-
-                    .activity__btn {
-                        width: calc(50% - 60px);
-                    }
-
-                    .activity__btn:nth-child(odd) {
-                        a {
-                            margin-right: 0;
+                .activity__inner {
+                    max-width: 1367px;
+                    // 活動内容に飛ぶコンテナ
+                    .activity__container {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: row;
+                        flex-wrap: wrap;
+    
+                        .activity__btn {
+                            width: calc(50% - 60px);
+                        }
+    
+                        .activity__btn:nth-child(odd) {
+                            a {
+                                margin-right: 0;
+                            }
+                        }
+                        .activity__btn:nth-child(even) {
+                            a {
+                                margin-left: 0;
+                            }
                         }
                     }
-                    .activity__btn:nth-child(even) {
-                        a {
-                            margin-left: 0;
+    
+                    // ポートフォリオ大会
+                    .portfolio__contest {
+                        position: relative;
+    
+                        .contest__text {
+                            position: absolute;
+                            top: 20%;
+                            left: 50%;
+                            transform: translateX(-50%); /*位置調整*/
+    
+                            h3 {
+                                font-size: 2rem;
+                            }
+    
+                            h4 {
+                                margin-top: 30px;
+                                font-size: 4rem;
+                            }
                         }
-                    }
-                }
-
-                // ポートフォリオ大会
-                .portfolio__contest {
-                    position: relative;
-
-                    .contest__text {
-                        position: absolute;
-                        top: 20%;
-                        left: 50%;
-                        transform: translateX(-50%); /*位置調整*/
-
-                        h3 {
-                            font-size: 2rem;
-                        }
-
-                        h4 {
-                            margin-top: 30px;
-                            font-size: 4rem;
-                        }
-                    }
-
-                    // 活動内容ページに飛ぶボタン
-                    .nav {
-                        border: 3px solid #f600a6;
-
-                        a {
-                            color: #f600a6;
+    
+                        // 活動内容ページに飛ぶボタン
+                        .nav {
+                            border: 3px solid #f600a6;
+    
+                            a {
+                                color: #f600a6;
+                            }
                         }
                     }
                 }
