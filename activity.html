@@ -9,16 +9,28 @@
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/active_css/active.css" />
+
+    <script src="js/jquery 3.5.1"></script>
+
+    <script>
+      $(function () {
+        $("#header").load("header.html", function () {
+          $.getScript("./js/script.js", function () {});
+        });
+        $("#footer").load("footer.html");
+      });
+    </script>
   </head>
-  <body background="./img/img04.png">
+  <body>
     <!-- ヘッダー読み込み -->
     <header id="header" class="header"></header>
-    <div id="header"></div>
-
+   
     <!-- ===============
     活動紹介メイン
     =============== -->
     <main>
+      <!--背景画像-->
+      <div class="bg_img">
       <!-- ---------------
         タイトル・内容紹介文
       --------------- -->
@@ -141,6 +153,7 @@
           </div>
         </section>
       </div>
+    </div>
       <!-- 活動内容個別紹介 end -->
     </main>
     <!-- メイン end -->
@@ -151,13 +164,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
-    <script>
-      $(function () {
-        $("#header").load("header.html", function () {
-          $.getScript("./js/script.js", function () {});
-        });
-        $("#footer").load("footer.html");
-      });
-    </script>
+    
   </body>
 </html>

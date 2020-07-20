@@ -1,9 +1,31 @@
+body {
+  background-color: #000;
+}
+
+main .bg_img {
+  position: relative;
+  background-image: url("/img/img04.png");
+  background-size: 150%;
+  background-attachment: fixed;
+}
+
+main .bg_img::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
+}
+
 main .activity_block {
   text-align: center;
 }
 
 main .activity_block .activity_title {
-  font-size: 35px;
+  font-size: 4rem;
   font-weight: bold;
   letter-spacing: 13px;
   padding: 10px 0;
@@ -11,7 +33,7 @@ main .activity_block .activity_title {
 }
 
 main .activity_block .activity_text {
-  font-size: 18px;
+  font-size: 32px;
   position: relative;
   padding: 15px;
 }
@@ -32,7 +54,7 @@ main .activity_block .activity_text::after {
 }
 
 main .activity_block .activity_subtext {
-  font-size: 14px;
+  font-size: 32px;
   padding: 15px;
 }
 
@@ -55,7 +77,7 @@ main .wrapper .main .item .activity_box .activity_box_main {
 }
 
 main .wrapper .main .item .activity_box .activity_box_main h3 {
-  font-size: 25px;
+  font-size: 2rem;
   font-weight: bold;
   padding-left: 30px;
   position: relative;
@@ -94,7 +116,7 @@ main .wrapper .main .item .activity_box .activity_box_main .activity_icon {
 
 main .wrapper .main .item .activity_box p {
   padding-top: 15px;
-  font-size: 14px;
+  font-size: 2rem;
 }
 
 @media screen and (min-width: 767px) {

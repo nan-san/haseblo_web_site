@@ -1,17 +1,39 @@
 @charset "utf-8";
 
+
+body {
+  background-color: #000;
+  }
+
+  // 背景画像を暗く設定＆footerに被らないように
 main {
+  .bg_img {
+    position: relative;
+    background-image: url("/img/img04.png");
+    background-size: 150%;
+    background-attachment: fixed;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: -1;
+    }
+  }
   .activity_block {
     text-align: center;
     .activity_title {
-      font-size: 35px;
+      font-size: 4rem;
       font-weight: bold;
       letter-spacing: 13px;
       padding: 10px 0;
       background-color: #000;
     }
     .activity_text {
-      font-size: 18px;
+      font-size: 32px;
       position: relative;
       padding: 15px;
 
@@ -33,8 +55,9 @@ main {
         margin: auto;
       }
     }
+    
     .activity_subtext {
-      font-size: 14px;
+      font-size: 32px;
       padding: 15px;
     }
   }
@@ -55,7 +78,7 @@ main {
             padding: 10px;
 
             h3 {
-              font-size: 25px;
+              font-size: 2rem;
               font-weight: bold;
               padding-left: 30px;
               position: relative;
@@ -95,7 +118,7 @@ main {
           }
           p {
             padding-top: 15px;
-            font-size: 14px;
+            font-size: 2rem;
           }
         }
       }
